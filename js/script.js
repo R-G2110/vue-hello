@@ -7,13 +7,14 @@ createApp({
 		return {
 			message: 'Hello Vue!',
 			index: 0,
-			linkHref: 'https://unsplash.it/600/300?image=171',
 			imageSource: ['img/01.webp',
-									  'img/02.webp',
-									  'img/03.webp',
-									  'img/04.webp',
-									  'img/05.webp'
-			]
+			'img/02.webp',
+			'img/03.webp',
+			'img/04.webp',
+			'img/05.webp'
+			],
+			linkHref: 'https://unsplash.it/600/300?image=',
+			randomNumber: 171
 		}
 	},
 
@@ -21,8 +22,13 @@ createApp({
 
 		indexPlusOne(){
 			this.index++;
-			if (this.index === this.imageSource.length) this.index =  0
+			if (this.index === this.imageSource.length) this.index =  0;
 			console.log(this.imageSource, this.index);
+		},
+		
+		randomThousand(){
+			this.randomNumber = Math.ceil(Math.random() * 1000);
+			console.log(this.randomNumber);
 		}
 	}
 }).mount('#app')

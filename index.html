@@ -23,6 +23,8 @@
 			<div class="container-fluid">
 				
 				<h1>{{message}}</h1>
+				<!-- First Card -->
+				<!-- Image -->
 				<div class="card">
 					<div class="card-body">
 						<div class="image-wrapper">
@@ -30,9 +32,26 @@
 						</div>
 					</div>
 				</div>
+				<!-- Button -->
 				<div class="my-3">
 					<button @click="indexPlusOne"  type="button" class="btn btn-outline-success"><a >Click to change pic</a></button>
 				</div>
+				<!-- /First Card -->
+
+				<!-- Second Card -->
+				<!-- Image -->
+				<div class="card mt-5">
+					<div class="card-body">
+						<div class="image-wrapper">
+							<img :src="linkHref + randomNumber" alt="">
+						</div>
+					</div>
+				</div>
+				<!-- Button -->
+				<div class="my-3">
+					<button @click="randomThousand"  type="button" class="btn btn-outline-success"><a >Click to change pic</a></button>
+				</div>
+				<!-- /Second Card -->
 				
 			</div>
 		</div>
